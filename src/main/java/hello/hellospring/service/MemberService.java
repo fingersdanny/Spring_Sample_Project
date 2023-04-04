@@ -12,6 +12,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    //@Autowired Spring Container에 올라가는 것들만 이 라인이 동작함
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
