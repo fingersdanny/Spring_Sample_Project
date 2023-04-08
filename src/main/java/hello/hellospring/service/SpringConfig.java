@@ -1,5 +1,6 @@
 package hello.hellospring.service;
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.repository.JpaMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class SpringConfig {
         return new MemberService(memberRepository);
 
     }
+
+    // 이렇게 해주면 Aop가 쓰이는줄 다른 사람들이 알 수 있음
 
     // Spring Bean에 등록된 memberRepository를 넣어서 기존의 Component Scan일때 처럼 연결 해줌
 //    @Bean
