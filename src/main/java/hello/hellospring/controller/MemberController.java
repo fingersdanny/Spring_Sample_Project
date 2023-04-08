@@ -29,7 +29,9 @@ public class MemberController {
     //생성자 주입 : 요즘 추천되는 방식 (Application 생성 시점에서)
     @Autowired
     public MemberController(MemberService memberService) {
+
         this.memberService = memberService;
+        System.out.println("memberService =" + memberService.getClass());
     }
 
     //setter 주입
